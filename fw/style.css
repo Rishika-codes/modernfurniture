@@ -1,0 +1,417 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #ff6f61;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #e65a50;
+  }
+  
+  /* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+.search{
+  width: 30%; 
+  height: 40px; 
+  border-radius: 4px;
+  display: flex;
+}
+header input{
+  width: 400px;
+  height: 36px;
+  color: black;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+.searchicon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5px;
+    height: 38.5px;
+    font-size: 1.2rem;
+    background-color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #ff6f61;
+  color: #fff;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  nav ul li a {
+    padding: 0.5rem;
+  }
+}
+  
+  /* Hero Section */
+  .hero {
+    background: url('sofa.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .products {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+  
+  .products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+  .products h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .product-grid {
+    display: flex;
+    overflow-x: auto; 
+    scroll-behavior: smooth; /* Smooth scrolling */
+    gap: 20px; /* Adjust spacing between product cards */
+    padding: 10px;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.product-card {
+    flex: 0 0 auto; /* Ensures cards don't shrink */
+    width: 250px; /* Adjust width as needed */
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+  
+  .product-card img {
+    width: 399.99px;
+    height: 399.99px;
+    border-radius: 5px;
+  }
+  
+  .product-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .product-card p {
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+  }
+  
+  .slider-button.prev {
+    left: 10px;
+  }
+  
+  .slider-button.next {
+    right: 10px;
+  }
+  /* Best Seller Section */
+.best-seller {
+  padding: 4rem 0;
+  background: #fff;
+  text-align: center;
+}
+
+.best-seller h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.best-seller-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.product-card {
+  flex: 0 0 calc(100% / 3); /* Adjust based on the number of visible slides */
+  box-sizing: border-box;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-cardseller img {
+  width: 100%;
+  border-radius: 5px;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.product-card p {
+  color: #ff6f61;
+  font-weight: bold;
+}
+.product-cardseller {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .best-seller-grid, .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .product-card {
+    flex: 0 0 calc(100% - 1rem);
+  }
+}
+
+
+  
+  /* About Us Section */
+  .about {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .about p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact input, .contact textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .social-links {
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+  /* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Sections */
+.hero, .products, .about, .contact {
+  opacity: 0; /* Start with hidden elements */
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Delay Animations for Each Section */
+.hero {
+  animation-delay: 0.5s;
+}
+
+.products {
+  animation-delay: 0.5s;
+}
+
+.about {
+  animation-delay: 0.5s;
+}
+
+.contact {
+  animation-delay: 1s;
+}
